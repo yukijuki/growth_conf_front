@@ -55,7 +55,21 @@ function createComment(response){
     var comment_ptext = document.createTextNode(response["text"]);
     document.getElementById("comment-card-text"+response["comment_id"]).appendChild(comment_ptext);
 
+    //like num
+    var like_num_div = document.createElement("div");
+    like_num_div.className = "like-count";
+    like_num_div.id = "like-count"+response["comment_id"];
+    document.getElementById(response["comment_id"]).appendChild(like_num_div);
+    
+    var like_num_p = document.createElement("p");
+    like_num_p.className = "text-dark py-1 mt-0 mr-3 float-right";
+    like_num_p.id = "like_num_p"+response["comment_id"];
+    document.getElementById("like-count"+response["comment_id"]).appendChild(like_num_p);
+    
+    var like_num_ptext = document.createTextNode("0");
+    document.getElementById("like_num_p"+response["comment_id"]).appendChild(like_num_ptext);
 
+    //like status
     var comment_div = document.createElement("div");
     comment_div.className = "like-button-area";
     comment_div.id = "like-button-area"+response["comment_id"];

@@ -29,6 +29,7 @@ function likePost(response, comment_id){
     var judge;
     var num_space = "like_num_p"+comment_id
     var num = document.getElementById(num_space).innerHTML;
+    var class_like = "btn-like btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0 mr-3 float-right"
 
     var add_num;
 
@@ -42,6 +43,7 @@ function likePost(response, comment_id){
         judge = "Like"
     } else {
         judge = "Unlike"
+        class_like = "btn-like btn-unlike btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0 mr-3 float-right";
     }
 
     //ライクの数値を変更
@@ -49,8 +51,10 @@ function likePost(response, comment_id){
     target.innerHTML = add_num;
 
     //ライクの文字を変更
-    var like_text = "like-button"+comment_id
+    var like_text = "like-button"+comment_id;
     var like = document.getElementById(like_text);
+    like.className = class_like;
+    like.id = "like-button"+comment_id;
     like.innerHTML = judge;
 
 }
