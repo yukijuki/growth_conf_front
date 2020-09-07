@@ -120,9 +120,18 @@ p {
     margin-bottom: .5rem;
 }
 
-.btn-like:hover, .btn-like:active, .btn-like:focus{
+.btn-like:hover, .btn-like:active{
     background-color: rgba(209, 87, 71, 0.5);
     box-shadow: 0px rgba(209, 87, 71, 0.5);
+}
+
+.btn-like:focus{
+    background-color: #ff3b62;
+    outline: none;
+}
+
+.like-count{
+    padding: 6px 15px 8px 8px;
 }
 
 .pagination .page-item .page-link{
