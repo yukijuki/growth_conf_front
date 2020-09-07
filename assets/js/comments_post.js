@@ -55,33 +55,49 @@ function createComment(response){
     var comment_ptext = document.createTextNode(response["text"]);
     document.getElementById("comment-card-text"+response["comment_id"]).appendChild(comment_ptext);
 
-    //like num
-    var like_num_div = document.createElement("div");
-    like_num_div.className = "like-count";
-    like_num_div.id = "like-count"+response["comment_id"];
-    document.getElementById(response["comment_id"]).appendChild(like_num_div);
-    
-    var like_num_p = document.createElement("p");
-    like_num_p.className = "text-dark py-1 mt-0 mr-3 float-right";
-    like_num_p.id = "like_num_p"+response["comment_id"];
-    document.getElementById("like-count"+response["comment_id"]).appendChild(like_num_p);
-    
-    var like_num_ptext = document.createTextNode("0");
-    document.getElementById("like_num_p"+response["comment_id"]).appendChild(like_num_ptext);
+    //like container
+    var like_container_div = document.createElement("div");
+    like_container_div.className = "like-container";
+    like_container_div.id = "like-container"+response["comment_id"];
+    document.getElementById(response["comment_id"]).appendChild(like_container_div);
 
-    //like status
-    var comment_div = document.createElement("div");
-    comment_div.className = "like-button-area";
-    comment_div.id = "like-button-area"+response["comment_id"];
-    document.getElementById(response["comment_id"]).appendChild(comment_div);
+    //like button div
+    var lke_button_div = document.createElement("div");
+    lke_button_div.className = "like-button float-right";
+    lke_button_div.id = "like-button-area"+response["comment_id"];
+    document.getElementById("like-container" + response["comment_id"]).appendChild(lke_button_div);
 
+    //like button div button
     var like_button = document.createElement("button");
-    like_button.className = "btn-like btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0 mr-3 float-right";
+    like_button.className = "btn-like btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0 mr-3";
     like_button.id = "like-button"+response["comment_id"];
+    like_button.setAttribute("onclick", "like_post_func(this.id);");
     document.getElementById("like-button-area"+response["comment_id"]).appendChild(like_button);
 
-    var like_buttontext = document.createTextNode("Like");
+    var like_buttontext = document.createTextNode("Like"); //like num add here
     document.getElementById("like-button"+response["comment_id"]).appendChild(like_buttontext);
+
+
+    //like number div
+    var like_num_div = document.createElement("div");
+    like_num_div.className = "like-count float-right";
+    like_num_div.id = "like-num-div"+response["comment_id"];
+    document.getElementById("like-container"+response["comment_id"]).appendChild(like_num_div);
+
+    //like number div div
+    var like_num_div2 = document.createElement("div");
+    like_num_div2.className = "text-orange";
+    like_num_div2.id = "like-num-div2"+response["comment_id"];
+    document.getElementById("like-num-div"+response["comment_id"]).appendChild(like_num_div2);
+
+    //like number div div
+    var like_num_i = document.createElement("i");
+    like_num_i.className = "fas fa-thumbs-up pr-1";
+    like_num_i.id = "like-num-i"+response["comment_id"];
+    document.getElementById("like-num-div2"+response["comment_id"]).appendChild(like_num_i);
+
+    var like_num_ptext = document.createTextNode("0");
+    document.getElementById("like-num-div2"+response["comment_id"]).appendChild(like_num_ptext);
 
     //タイトル・コメントカードのコメント数の変更
     var comment_num = document.getElementById("top-card-title_text").innerHTML;
