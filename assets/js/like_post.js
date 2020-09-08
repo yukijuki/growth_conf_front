@@ -27,9 +27,13 @@ function like_post_api(uuid, comment_id) {
 function likePost(response, comment_id){
 
     var judge;
-    var num_space = "like_num_p"+comment_id
-    var num = document.getElementById(num_space).innerHTML;
-
+    var num_space = "like-num-div2"+comment_id
+    var html_num = document.getElementById(num_space).innerHTML;
+    var class_like = "btn-like btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0 mr-3"
+    
+    
+    var num = html_num.slice(89)
+    console.log("num", num)
     var add_num;
 
     if (response["action"] == "delete"){
@@ -42,15 +46,18 @@ function likePost(response, comment_id){
         judge = "Like"
     } else {
         judge = "Unlike"
+        class_like = "btn-like btn-unlike btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0 mr-3";
     }
 
     //ライクの数値を変更
     var target = document.getElementById(num_space);
-    target.innerHTML = add_num;
+    target.innerHTML = html_num.slice(0,89) + add_num;
 
     //ライクの文字を変更
-    var like_text = "like-button"+comment_id
+    var like_text = "like-button"+comment_id;
     var like = document.getElementById(like_text);
+    like.className = class_like;
+    like.id = "like-button"+comment_id;
     like.innerHTML = judge;
 
 }
