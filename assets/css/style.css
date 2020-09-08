@@ -1,3 +1,7 @@
+.btn-unlike{
+    background-color: #a9a9a9!important;
+}
+
 .bg-growth{
     background-color: #5A47D1;
 }
@@ -59,7 +63,7 @@ p {
 
 .share-sns{
     margin-top: .5rem;
-    margin-right: .3rem;
+    margin-right: .7rem;
 }
 
 /*main*/
