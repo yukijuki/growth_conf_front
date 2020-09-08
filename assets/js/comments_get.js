@@ -56,6 +56,13 @@ function createComments(response){
     like_container_div.id = "like-container"+response["comment_id"];
     document.getElementById(response["comment_id"]).appendChild(like_container_div);
 
+    if(response["judge"] == true) {
+        judge = "Unlike"
+        button_class = "btn-like btn-unlike btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0 mr-3";
+    } else {
+        judge = "Like"
+        button_class = "btn-like btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0 mr-3";
+    }
 
     //like button div
     var lke_button_div = document.createElement("div");
@@ -65,16 +72,11 @@ function createComments(response){
 
     //like button div button
     var like_button = document.createElement("button");
-    like_button.className = "btn-like btn-unlike btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0 mr-3";
+    like_button.className = button_class;
     like_button.id = "like-button"+response["comment_id"];
     like_button.setAttribute("onclick", "like_post_func(this.id);");
     document.getElementById("like-button-area"+response["comment_id"]).appendChild(like_button);
 
-    if(response["judge"] == true) {
-        judge = "Unlike"
-    } else {
-        judge = "Like"
-    }
     var like_buttontext = document.createTextNode(judge); //like num add here
     document.getElementById("like-button"+response["comment_id"]).appendChild(like_buttontext);
 
