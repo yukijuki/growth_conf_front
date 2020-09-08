@@ -57,6 +57,11 @@ p {
     padding: 1.5rem;
 }
 
+.share-sns{
+    margin-top: .5rem;
+    margin-right: .3rem;
+}
+
 /*main*/
 .main_part{
     border-top: solid 0.1px #dcdcdc;
@@ -152,7 +157,12 @@ p {
     height: 2.3rem;
 }
 
-#email::placeholder, #title::placeholder, #text::placeholder, #posttitle::placeholder, #posttext::placeholder, #commenttitle::placeholder, #commenttext::placeholder{
+#email::placeholder, #title::placeholder, #nickname::placeholder{
+    padding-left: .5rem;
+    padding-bottom: .5rem;
+}
+
+#text::placeholder, #commenttitle::placeholder, #commenttext::placeholder{
     padding-left: .5rem;
     padding-top: .5rem;
     padding-bottom: .5rem;
@@ -385,7 +395,7 @@ input[type=checkbox] {
 .sidebaricon-row{
     z-index: 99;
     position: fixed;
-    bottom: 22px;
+    bottom: 18px;
     left: -1px;
     width: 50px;
     height: 50px;
@@ -399,6 +409,7 @@ input[type=checkbox] {
     cursor: pointer;
     font-size: 2rem;
     color: #fff;
+    margin-bottom: 0;
 }
 
 .horizontal {
@@ -448,8 +459,8 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 .btn-spbutton{
-    width: 4rem;
-    height: 4rem;
+    width: 3.5rem;
+    height: 3.5rem;
     float: right;
 }
 
