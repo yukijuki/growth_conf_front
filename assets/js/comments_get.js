@@ -136,7 +136,6 @@ async function comments_get_func() {
     var text = document.createTextNode(response[0]["text"]);
     document.getElementById("comment-p").appendChild(text);
 
-
     //タイトル・コメントカードのコメント数の変更
     var comment_h5 = document.createElement("h5");
     comment_h5.className = "d-inline-block my-auto pl-2 text-orange";
@@ -145,6 +144,7 @@ async function comments_get_func() {
 
     var text = document.createTextNode(response[0]["comments_num"]);
     document.getElementById("top-card-title_text").appendChild(text);
+
 
     for (var i = 1; i < response.length; i++) {
         createComments(response[i]);
