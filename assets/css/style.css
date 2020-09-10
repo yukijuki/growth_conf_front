@@ -491,6 +491,11 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     vertical-align: baseline!important;
 }
 
+.contact-form-wrapper{
+    margin-top: 61px;
+}
+
+
 @media (max-width: 576px){
     .sp-sidebar{
         display: block;
