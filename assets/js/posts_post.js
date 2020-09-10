@@ -60,7 +60,7 @@ function createPost(response){
 
 async function posts_post_func() {
 
-    const email = document.getElementById("email").value;
+    var email = document.getElementById("email").value;
     const title = document.getElementById("title").value;
     const text = document.getElementById("text").value;
     const marketer = document.getElementById("Marketer").checked;
@@ -75,6 +75,10 @@ async function posts_post_func() {
         category = "PdM"
     } else if(anlyat == true) {
         category = "Data Analyst"
+    }
+
+    if (email == undefined) {
+        email == "yukijukifree@gmail.com"
     }
 
     console.log("email", email)
