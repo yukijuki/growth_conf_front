@@ -64,6 +64,8 @@ function likePost(response, comment_id){
 
 async function like_post_func(id) {
 
+    login_verification();
+
     var comment_id = id.slice(11);
     console.log("comment_id for like", comment_id);
 
