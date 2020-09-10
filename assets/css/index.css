@@ -120,6 +120,37 @@ hr {
     color: #5A47D1;
 }
 
+/*news*/
+
+#news {
+    padding: 0 0 8rem 0;
+}
+
+#news h2{
+    color: black;
+    font-weight: 700;
+}
+
+.news-wrapper{
+    text-align: center;
+
+}
+
+.news-wrapper p{
+    color: black;
+    font-size: 1.3rem;
+    font-weight: 600;
+    margin-bottom: 15px;
+    border-bottom: 2px dashed #5A47D1;
+    display: inline-block;
+}
+
+.news-container{
+    overflow-y: scroll;
+    width: 80%;
+    height: 8rem;
+}
+
 /*contact*/
 
 #contact {
@@ -245,6 +276,9 @@ h2.section-title:after, .h2.section-title:after {
         margin-left: .5rem;
         margin-top: 3rem!important;
         border-radius: 2rem;
+    }
+    .news-wrapper p{
+        font-size: .8rem;
     }
 }
 
