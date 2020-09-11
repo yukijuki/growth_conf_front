@@ -491,10 +491,73 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
     vertical-align: baseline!important;
 }
 
-.contact-form-wrapper{
-    margin-top: 61px;
+
+/*TOP-Section*/
+.page-top-section {
+    position: relative;
+    height: 405px;
+    background: #5A47D1;
 }
 
+.overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    z-index: 3;
+    background-image: url(../img/overlay.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page-top-section .container {
+    position: relative;
+    z-index: 5;
+}
+
+.page-top-section .page-info {
+    display: inline-block;
+    padding-top: 200px;
+}
+
+.page-top-section .page-info h2 {
+    color: #fff;
+    font-weight: 400;
+    margin-bottom: 15px;
+    float: left;
+    font-size: 36px;
+    padding: 0;
+    margin: 0;
+}
+
+.page-top-section .page-info .page-links a, .page-top-section .page-info .page-links span {
+    font-size: 18px;
+    font-family: oswald,sans-serif;
+    color: #fff;
+    margin-right: 12px;
+    padding-right: 12px;
+    font-weight: 400;
+    position: relative;
+}
+
+.page-top-section .page-info .page-links span {
+    margin-right: 0;
+    padding-right: 0;
+    color: #2be6ab;
+}
+
+.page-top-section .page-info .page-links a, .page-top-section .page-info .page-links span {
+    font-size: 18px;
+    font-family: oswald,sans-serif;
+    color: #fff;
+    margin-right: 12px;
+    padding-right: 12px;
+    font-weight: 400;
+    position: relative;
+}
+
+/*レスポンシブ*/
 
 @media (max-width: 576px){
     .sp-sidebar{
