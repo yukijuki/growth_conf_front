@@ -109,6 +109,8 @@ function createComment(response){
 
 async function comments_post_func() {
 
+    login_verification();
+
     /// Get parameter for category    
     var params = {};
     var query = window.location.href.split("?")[1];
