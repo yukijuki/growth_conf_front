@@ -142,6 +142,21 @@ p {
     outline: none;
 }
 
+.btn-sns{
+    font-size: 1rem;
+    margin-bottom: .5rem;
+}
+
+.btn-sns:hover, .btn-sns:active{
+    background-color: rgba(209, 87, 71, 0.5);
+    box-shadow: 0px rgba(209, 87, 71, 0.5);
+}
+
+.btn-sns:focus{
+    background-color: #5A47D1;
+    outline: none;
+}
+
 .like-count{
     padding: 6px 15px 8px 8px;
 }
@@ -164,7 +179,7 @@ p {
     height: 2.3rem;
 }
 
-#email::placeholder, #title::placeholder, #nickname::placeholder{
+#email::placeholder, #title::placeholder, #nickname::placeholder, #snslink::placeholder{
     padding-left: .5rem;
     padding-bottom: .5rem;
 }

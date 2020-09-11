@@ -41,7 +41,7 @@
                 <div class="modal-body d-block">
                     <label for="text" class="col-form-label font-weight-bold pb-3">メールアドレス</label> 
                     <div><input id="email" name="email" placeholder="コメントが来た際に通知を受け取る場合はemailを入力" class="input-title rounded" required="required" type="text" required></div>
-                    <label for="text" class="col-form-label font-weight-bold pb-3">タイトル</label> 
+                    <label for="text" class="col-form-label font-weight-bold pt-4 pb-3">タイトル</label> 
                     <div><input id="title" name="title" placeholder="質問のタイトルを入力" class="input-title rounded" required="required" type="text" required></div>
                     <label for="textarea" class="col-form-label pt-4 pb-3 font-weight-bold">本文</label> 
                     <div><textarea id="text" name="text" type="text" placeholder="質問の本文を入力..." class="input-text rounded" cols="40" rows="7.5" required></textarea></div>
@@ -79,6 +79,8 @@
                 <div class="modal-body d-block">
                     <label for="text" class="col-form-label font-weight-bold pb-3">ニックネーム</label> 
                     <div><input id="nickname" name="nickname" placeholder="ニックネームを入力" class="input-title rounded" required="required" type="text" required></div>
+                    <label for="text" class="col-form-label font-weight-bold pt-4 pb-3">SNSリンク</label> 
+                    <div><input id="snslink" name="snslink" placeholder="コメントにSNSのリンクを表示する場合は入力" class="input-title rounded" required="required" type="url" required></div>
                     <label for="textarea" class="col-form-label pt-4 pb-3 font-weight-bold">本文</label> 
                     <div><textarea id="commenttext" name="commenttext" type="text" placeholder="本文を入力..." class="input-text rounded" cols="40" rows="7.5" required></textarea></div>
                 </div>
@@ -256,15 +258,19 @@
 
                                     <div id="comment">
                                         
-                                        <!-- <div class="card mx-auto bg-white p-2" id="#" >
+                                        <div class="card mx-auto bg-white p-2">
                                             <div class="card-body px-1 pb-3">
-                                                <h5 class="card-title px-4 text-dark">コメントテスト</h5>
+                                                <h5 class="card-title px-4 text-dark">テスト用サンプル</h5>
                                                 <p class="card-text px-4 text-dark">先日、上司からユーザー数を２倍にしろという無茶振りがありました。自分は、toC事業会社で働いています。どのように進めていけばいいかわかりません。教えていただけ</p>
                                             </div>
                                         
                                             <div class="like-container">
-                                                <div class="like-button float-right">
-                                                    <button type="button" class="btn-like btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0 mr-3">Like</button>
+                                                <div class="like-button float-right mr-2">
+                                                    <a href="#" class="btn-sns btn btn-group-lg bg-growth btn-block text-white rounded-pill py-1 mt-0 mr-3" target="_blank" rel="noopener noreferrer">Contact</a>
+                                                </div>
+
+                                                <div class="like-button float-right mr-2">
+                                                    <button type="button" class="btn-like btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0">Like</button>
                                                 </div>
 
                                                 <div class="like-count float-right">
@@ -272,7 +278,7 @@
                                                 </div>
 
                                             </div>
-                                        </div> -->
+                                        </div>
 
                                     </div>
                                     
