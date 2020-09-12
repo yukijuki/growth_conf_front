@@ -161,7 +161,7 @@ img {
 
 .ten_d_text h2 {
     font-size: 50px;
-    font-family: "Heebo", sans-serif;
+    font-weight: 700;
     color: #fff;
     padding-bottom: 10px;
 }
@@ -215,6 +215,53 @@ img {
 }
 
 
+/*Team*/
+
+.ftco-section {
+    position: relative;
+    width: 100%;
+    display: block;
+}
+
+.ftco-section {
+    padding: 8em 0;
+    position: relative;
+}
+
+.heading-section .subheading {
+    color: #000;
+    font-size: 14px;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.heading-section h2 {
+    font-size: 50px;
+    font-weight: 700;
+    color: #5A47D1;
+}
+
+.block-10 .person-info {
+    height: 65px;
+}
+
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+    vertical-align: middle;
+    border-style: none;
+}
+
+.person-info .name{
+    font-weight: 600;
+    font-size: 1.3rem;
+}
+
+.person-info .position{
+    font-weight: 600;
+    font-size: 1rem;
+}
+
 
 /*メディアクエリ */
 
@@ -259,6 +306,15 @@ img {
     }
     #banner1 input[type="submit"] {
         padding: 0 30px;
+    }
+}
+
+@media (max-width: 767.98px){
+    .ftco-section {
+        padding: 6em 0;
+    }
+    .heading-section h2 {
+        font-size: 28px;
     }
 }
 
