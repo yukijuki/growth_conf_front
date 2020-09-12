@@ -13,13 +13,26 @@
     <!-- CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="../assets/css/style.css" rel="stylesheet" />
+    <link href="../assets/css/animation.css" rel="stylesheet" />
 
+    <!-- Script -->
     <script type="text/javascript" src="../assets/js/posts_get.js"></script>
     <script type="text/javascript" src="../assets/js/posts_post.js"></script>
     <script type="text/javascript" src="../assets/js/login.js"></script>
 
 </head>
 <body class="index-page sidebar-collapse">
+
+    <!-- Loading -->
+    <div id="loader-bg">
+        <div id="loader">
+        <img src="../assets/img/ajax-loader.gif" width="80" height="80" alt="Now Loading..." />
+        <p class="text-growth pl-1 pt-2">Now Loading...</p>
+        </div>
+    </div>
+    <div id="wrap">
+        ロード後に表示させたい内容
+    </div>
 
     <!-- モーダルの設定 -->
     <div class="modal fade" id="modal1" tabindex="-1" role="dialog" aria-labelledby="label1" aria-hidden="true">
@@ -234,6 +247,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
     <script type="text/javascript" src="../assets/js/home.js"></script>
+    <script type="text/javascript" src="../assets/js/animation.js"></script>
 
 
 </body>
