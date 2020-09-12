@@ -12,9 +12,10 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <!-- CSS Files -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    
     <link href="./assets/css/style.css" rel="stylesheet"/>
     <link rel="stylesheet" href="./assets/css/index.css">
+    <link rel="stylesheet" href="./assets/css/animation.css">
+    <!-- Script Files -->
     <script type="text/javascript" src="../assets/js/posts_get.js"></script>
     <script type="text/javascript" src="../assets/js/posts_post.js"></script>
     <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -28,8 +29,16 @@
     </script>
 </head>
 <body class="index-page sidebar-collapse">
-
-
+  <!-- Loading -->
+  <div id="loader-bg">
+    <div id="loader">
+      <img src="./assets/img/ajax-loader.gif" width="80" height="80" alt="Now Loading..." />
+      <p class="text-growth pl-1 pt-2">Now Loading...</p>
+    </div>
+  </div>
+  <div id="wrap">
+    ロード後に表示させたい内容
+  </div>
     <!-- Navbar -->
     <header>
       <nav class="navbar navbar-expand-lg bg-growth fixed-top" color-on-scroll="400">
@@ -88,7 +97,7 @@
             <div class="row align-items-center justify-content-between">
                 <div class="col-lg-6 col-md-6">
                     <div class="banner_text">
-                        <div class="banner_text_iner">
+                        <div class="banner_text_iner fadein-auto">
                             <h5>マーケターとPdMのための<br>グロースハック特化型Q&Aサイト</h5>
                             <h1><span class="under-line">Growth Conf.</span></h1>
                             <h4>"正解がないサービスの課題を解決"</h4>
@@ -104,7 +113,7 @@
       <div class="container feature-container">
         <h2 class="text-center mt-0">Growth Conf.の特徴</h2>
         <hr class="divider my-4">
-        <div class="row feature-row">
+        <div class="row feature-row fadein">
           <div class="col-lg-3 col-md-6 text-center">
             <div class="feature-content mt-5">
               <i class="fas fa-question feature-icon mb-4"></i>
@@ -148,7 +157,7 @@
         <h2 class="text-center">お知らせ</h2>
         <hr class="divider my-4">
 
-        <div class="news-wrapper pt-5">
+        <div class="news-wrapper pt-5 fadein">
           <div class="news-container mx-auto">
             <p>2020/09/12　Commentする際にSNSリンクを表示できるようになりました！</p><br>
             <p>2020/09/12　Aboutページを追加しました！</p><br>
@@ -166,28 +175,20 @@
     </section>
 
     <section id="contact">
-
 			<div class="container">
-
 				<div class="row">
-					
 					<div class="col-md-8 col-md-offset-2 mx-auto">
-
 						<div class="title-content">
-							
-							<h2 class="section-title">お問い合わせ</h2>
-
-							<p class="text-white">Growth Conf.に関するお問い合わせやご質問などはこちらのお問い合わせフォームよりご連絡ください。担当のものが確認の後、ご連絡させていただきます。また、数日~数週間程度お時間をいただく場合がございますので、あらかじめご了承ください。</p>
-
+              <h2 class="section-title">お問い合わせ</h2>
+              <div class="fadein">
+                <p class="text-white">Growth Conf.に関するお問い合わせやご質問などはこちらのお問い合わせフォームよりご連絡ください。担当のものが確認の後、ご連絡させていただきます。また、数日~数週間程度お時間をいただく場合がございますので、あらかじめご了承ください。</p>
+                <div class="contact-info">
+                  <a href="mailto:growthconf.info@gmail.com"><p class="text-white">growthconf.info@gmail.com</p></a>
+                </div>
+              </div>
             </div>
-            <div class="contact-info">
-              <a href="mailto:growthconf.info@gmail.com"><p class="text-white">growthconf.info@gmail.com</p></a>
-            </div>
-
 					</div>
-
 				</div>
-
 			</div> <!-- /.container -->
 
 		</section>
@@ -196,6 +197,7 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jscroll/2.4.1/jquery.jscroll.min.js"></script>
+    <script src="assets/js/animation.js"></script>
 
 </body>
 </html>
