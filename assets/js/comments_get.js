@@ -58,15 +58,33 @@ function createComments(response){
 
     if(response["judge"] == true) {
         judge = "Unlike"
-        button_class = "btn-like btn-unlike btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0 mr-3";
+        button_class = "btn-like btn-unlike btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0";
     } else {
         judge = "Like"
-        button_class = "btn-like btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0 mr-3";
+        button_class = "btn-like btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0";
     }
+
+    //SNS button div
+    var sns_button_div = document.createElement("div");
+    sns_button_div.className = "like-button float-right mr-2";
+    sns_button_div.id = "sns-area"+response["comment_id"];
+    document.getElementById("like-container" + response["comment_id"]).appendChild(sns_button_div);
+
+    //SNS button div button
+    var SNS_button = document.createElement("a");
+    SNS_button.className = "btn-sns btn btn-group-lg bg-growth btn-block text-white rounded-pill py-1 mt-0 mr-3";
+    SNS_button.id = "sns-button"+response["comment_id"];
+    SNS_button.target = "_blank";
+    SNS_button.rel = "noopener noreferrer";
+    SNS_button.href = "https://twitter.com/GrowthConf_"; //response["sns"]
+    document.getElementById("sns-area"+response["comment_id"]).appendChild(SNS_button);
+
+    var sns = document.createTextNode("Contact"); //like num add here
+    document.getElementById("sns-button"+response["comment_id"]).appendChild(sns);
 
     //like button div
     var lke_button_div = document.createElement("div");
-    lke_button_div.className = "like-button float-right";
+    lke_button_div.className = "like-button float-right mr-2";
     lke_button_div.id = "like-button-area"+response["comment_id"];
     document.getElementById("like-container" + response["comment_id"]).appendChild(lke_button_div);
 
@@ -144,7 +162,6 @@ async function comments_get_func() {
 
     var text = document.createTextNode(response[0]["comments_num"]);
     document.getElementById("top-card-title_text").appendChild(text);
-
 
     for (var i = 1; i < response.length; i++) {
         createComments(response[i]);

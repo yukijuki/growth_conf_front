@@ -1,10 +1,11 @@
 
-function comments_post_api(post_id, text, name) {
+function comments_post_api(post_id, text, name, sns) {
     const url = "https://growthqa.du.r.appspot.com/comments_post";
     
     var data = {
         "post_id": post_id,
         "text": text,
+        "sns": sns,
         "name": name
     }
 
@@ -61,15 +62,33 @@ function createComment(response){
     like_container_div.id = "like-container"+response["comment_id"];
     document.getElementById(response["comment_id"]).appendChild(like_container_div);
 
+    //SNS button div
+    var sns_button_div = document.createElement("div");
+    sns_button_div.className = "like-button float-right mr-2";
+    sns_button_div.id = "sns-area"+response["comment_id"];
+    document.getElementById("like-container" + response["comment_id"]).appendChild(sns_button_div);
+
+    //SNS button div button
+    var SNS_button = document.createElement("a");
+    SNS_button.className = "btn-sns btn btn-group-lg bg-growth btn-block text-white rounded-pill py-1 mt-0 mr-3";
+    SNS_button.id = "sns-button"+response["comment_id"];
+    SNS_button.target = "_blank";
+    SNS_button.rel = "noopener noreferrer";
+    SNS_button.href = "https://twitter.com/GrowthConf_"; //response["sns"]
+    document.getElementById("sns-area"+response["comment_id"]).appendChild(SNS_button);
+
+    var sns = document.createTextNode("Contact"); //like num add here
+    document.getElementById("sns-button"+response["comment_id"]).appendChild(sns);
+
     //like button div
     var lke_button_div = document.createElement("div");
-    lke_button_div.className = "like-button float-right";
+    lke_button_div.className = "like-button float-right mr-2";
     lke_button_div.id = "like-button-area"+response["comment_id"];
     document.getElementById("like-container" + response["comment_id"]).appendChild(lke_button_div);
 
     //like button div button
     var like_button = document.createElement("button");
-    like_button.className = "btn-like btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0 mr-3";
+    like_button.className = "btn-like btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0";
     like_button.id = "like-button"+response["comment_id"];
     like_button.setAttribute("onclick", "like_post_func(this.id);");
     document.getElementById("like-button-area"+response["comment_id"]).appendChild(like_button);
@@ -127,15 +146,20 @@ async function comments_post_func() {
 
     var name = document.getElementById("nickname").value;
     var text = document.getElementById("commenttext").value;
+    var sns = document.getElementById("snslink").value;
 
     if (!name) {
         name = "匿名"
     }
+    if(!sns) {
+        sns = "匿名"
+    }
 
     console.log(post_id, text, name);
 
-    const response = await comments_post_api(post_id, text, name);
+    const response = await comments_post_api(post_id, text, name, sns);
     console.log("APIresponse", response);
 
+    //location.reload();
     createComment(response);
 }
