@@ -62,6 +62,14 @@ function createComment(response){
     like_container_div.id = "like-container"+response["comment_id"];
     document.getElementById(response["comment_id"]).appendChild(like_container_div);
 
+    if(response["sns"] == "匿名") {
+        sns = "None";
+        snsClass = "btn-sns btn-sns-none btn btn-group-lg bg-growth btn-block text-white rounded-pill py-1 mt-0 mr-3";
+    } else {
+        sns = response["sns"];
+        snsClass = "btn-sns btn btn-group-lg bg-growth btn-block text-white rounded-pill py-1 mt-0 mr-3";
+    }
+
     //SNS button div
     var sns_button_div = document.createElement("div");
     sns_button_div.className = "like-button float-right mr-2";
@@ -70,11 +78,11 @@ function createComment(response){
 
     //SNS button div button
     var SNS_button = document.createElement("a");
-    SNS_button.className = "btn-sns btn btn-group-lg bg-growth btn-block text-white rounded-pill py-1 mt-0 mr-3";
+    SNS_button.className = snsClass;
     SNS_button.id = "sns-button"+response["comment_id"];
     SNS_button.target = "_blank";
     SNS_button.rel = "noopener noreferrer";
-    SNS_button.href = "https://twitter.com/GrowthConf_"; //response["sns"]
+    SNS_button.href = sns; //response["sns"]
     document.getElementById("sns-area"+response["comment_id"]).appendChild(SNS_button);
 
     var sns = document.createTextNode("Contact"); //like num add here
