@@ -157,6 +157,15 @@ p {
     outline: none;
 }
 
+.btn-sns-none{
+    background-color: #a9a9a9!important;
+}
+
+.btn-sns-none:focus, .btn-sns-none:hover, .btn-sns-none:active{
+    background-color:#a9a9a9;
+    outline: none;
+}
+
 .like-count{
     padding: 6px 15px 8px 8px;
 }
