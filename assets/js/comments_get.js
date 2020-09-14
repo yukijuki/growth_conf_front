@@ -64,16 +64,6 @@ function createComments(response){
         button_class = "btn-like btn btn-group-lg bg-orange btn-block text-white rounded-pill py-1 mt-0";
     }
 
-    if(response["sns"] == undefined) {
-        sns = "None";
-        snsClass = "btn-sns btn-sns-none btn btn-group-lg bg-growth btn-block text-white rounded-pill py-1 mt-0 mr-3";
-    } else if(response["sns"] == "匿名") {
-        sns = "None";
-        snsClass = "btn-sns btn-sns-none btn btn-group-lg bg-growth btn-block text-white rounded-pill py-1 mt-0 mr-3";
-    } else {
-        sns = response["sns"];
-        snsClass = "btn-sns btn btn-group-lg bg-growth btn-block text-white rounded-pill py-1 mt-0 mr-3";
-    }
 
     //SNS button div
     var sns_button_div = document.createElement("div");
@@ -82,7 +72,19 @@ function createComments(response){
     document.getElementById("like-container" + response["comment_id"]).appendChild(sns_button_div);
 
     //SNS button div button
-    var SNS_button = document.createElement("a");
+    if(response["sns"] == undefined) {
+        sns = "#";
+        snsClass = "btn-sns btn-sns-none btn btn-group-lg bg-growth btn-block text-white rounded-pill py-1 mt-0 mr-3";
+        var SNS_button = document.createElement("p");
+    } else if(response["sns"] == "匿名") {
+        sns = "#";
+        snsClass = "btn-sns btn-sns-none btn btn-group-lg bg-growth btn-block text-white rounded-pill py-1 mt-0 mr-3";
+        var SNS_button = document.createElement("p");
+    } else {
+        sns = response["sns"];
+        snsClass = "btn-sns btn btn-group-lg bg-growth btn-block text-white rounded-pill py-1 mt-0 mr-3";
+        var SNS_button = document.createElement("a");
+    }
     SNS_button.className = snsClass;
     SNS_button.id = "sns-button"+response["comment_id"];
     SNS_button.target = "_blank";
