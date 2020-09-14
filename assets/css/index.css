@@ -248,7 +248,7 @@ h2.section-title:after, .h2.section-title:after {
     /*スマートフォン*/
     .banner_part {
         background-image: url(../img/growthQnA_SPheader.png);
-        margin-top: 61px;
+        margin-top: 37px;
         height: 100vh;
     }
     .banner_part .banner_text h5 {
