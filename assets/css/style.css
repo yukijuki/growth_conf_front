@@ -384,7 +384,7 @@ fieldset {
     margin-top: 60px;
     transform: translateX(-250px);
     transition: transform 250ms ease-in-out;
-    background-color: #ff3b62;
+    background-color: #5a47d1;
     z-index: 1;
 }
 .sidebarMenuInner{
