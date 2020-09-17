@@ -66,6 +66,8 @@ async function posts_post_func() {
     const marketer = document.getElementById("Marketer").checked;
     const pdm = document.getElementById("PdM").checked;
     const anlyat = document.getElementById("Data Analyst").checked;
+    const designer = document.getElementById("Product Designer").checked;
+    const researcher = document.getElementById("UX Researcher").checked;
 
     var category;
 
@@ -75,10 +77,14 @@ async function posts_post_func() {
         category = "PdM"
     } else if(anlyat == true) {
         category = "Data Analyst"
+    } else if (designer == true) {
+        category = "Product Designer"
+    } else if(researcher == true) {
+        category = "UX Researcher"
     }
 
     if (email == undefined) {
-        email == "yukijukifree@gmail.com"
+        email == "No_Email"
     }
 
     console.log("email", email)
