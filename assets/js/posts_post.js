@@ -31,7 +31,7 @@ function posts_post_api(email, title, text, category) {
 function createPost(response){
 
     var div = document.createElement("div");
-    div.className = "card mx-auto bg-white p-2 et_pb_module";
+    div.className = "card mx-auto bg-white px-2 et_pb_module";
     div.id = response["post_id"];
     document.getElementById("apost").appendChild(div);
 

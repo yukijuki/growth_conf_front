@@ -21,6 +21,7 @@
 
 .text-orange{
     color: #ff3b62;
+    font-size: 1rem;
 }
 
 a:hover{
@@ -106,6 +107,12 @@ p {
 
 .card-body h5{
     font-weight: 700;
+    font-size: 1rem;
+}
+
+.card-body p{
+    font-size: .9rem;
+    line-height: 22px;
 }
 
 .btn-post{
@@ -130,7 +137,7 @@ p {
 
 .btn-like{
     width: 80px;
-    font-size: 1rem;
+    font-size: .8rem;
     margin-bottom: .5rem;
 }
 
@@ -145,7 +152,7 @@ p {
 }
 
 .btn-sns{
-    font-size: 1rem;
+    font-size: .8rem;
     margin-bottom: .5rem;
 }
 
@@ -169,7 +176,7 @@ p {
 }
 
 .like-count{
-    padding: 6px 15px 8px 8px;
+    padding: 3.5px 13px 8px 8px;
 }
 
 .pagination .page-item .page-link{

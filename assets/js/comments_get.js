@@ -22,12 +22,12 @@ function createComments(response){
     var judge;
 
     var comment_a = document.createElement("div");
-    comment_a.className = "card mx-auto bg-white p-2";
+    comment_a.className = "card mx-auto bg-white px-2 pb-2 pt-1";
     comment_a.id = response["comment_id"];
     document.getElementById("comment").appendChild(comment_a);
 
     var div = document.createElement("div");
-    div.className = "card-body px-1 pb-2";
+    div.className = "card-body px-1 pb-3";
     div.id = "comment-card-body"+response["comment_id"];
     document.getElementById(response["comment_id"]).appendChild(div);
 

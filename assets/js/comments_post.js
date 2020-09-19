@@ -29,12 +29,12 @@ function comments_post_api(post_id, text, name, sns) {
 function createComment(response){
 
     var comment_a = document.createElement("div");
-    comment_a.className = "card mx-auto bg-white p-2";
+    comment_a.className = "card mx-auto bg-white px-2 pb-2 pt-1";
     comment_a.id = response["comment_id"];
     document.getElementById("comment-card").appendChild(comment_a);
 
     var div = document.createElement("div");
-    div.className = "card-body px-1 pb-0";
+    div.className = "card-body px-1 pb-3";
     div.id = "comment-card-body"+response["comment_id"];
     document.getElementById(response["comment_id"]).appendChild(div);
 
