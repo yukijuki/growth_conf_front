@@ -21,7 +21,7 @@
 
 .text-orange{
     color: #ff3b62;
-    font-size: 1rem;
+    font-size: .9rem;
 }
 
 a:hover{
@@ -58,13 +58,17 @@ p {
     color: black;
 }
 
+.modal-header {
+    padding: .8rem 1rem;
+}
+
 .modal-header .close {
     padding: 0rem 1rem;
     margin: -1rem -1rem -1rem auto;
 }
 
 .modal-body{
-    padding: 1.5rem;
+    padding: .6rem 1.5rem;
 }
 
 .share-sns{
@@ -176,7 +180,7 @@ p {
 }
 
 .like-count{
-    padding: 3.5px 13px 8px 8px;
+    padding: 4.2px 13px 8px 8px;
 }
 
 .pagination .page-item .page-link{
@@ -264,7 +268,7 @@ fieldset {
 }
 
 .fa-chevron-left{
-    font-size: 1.5rem;
+    font-size: 1.25rem;
 }
 
 .tabContents {
@@ -435,9 +439,9 @@ input[type=checkbox] {
 .sidebaricon-row{
     z-index: 99;
     position: fixed;
-    bottom: 22px;
+    bottom: 20px;
     left: -1px;
-    width: 52px;
+    width: 50px;
     height: 50px;
     background-color: #5A47D1;
     text-align: center;
@@ -499,13 +503,14 @@ input[type=checkbox]:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 }
 
 .btn-spbutton{
-    width: 3.8rem;
-    height: 3.8rem;
+    width: 3.3rem;
+    height: 3.3rem;
     float: right;
 }
 
 .fa-plus{
-    font-size: 2.2rem;
+    font-size: 1.8rem;
+    padding-top: 3px;
 }
 
 .contact-info{
