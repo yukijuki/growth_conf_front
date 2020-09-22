@@ -1,5 +1,16 @@
 
 /*header*/
+@media (max-width: 576px){
+    .br-sp{
+        display: block;
+    }
+}
+
+@media (min-width: 576px){
+    .br-sp{
+        display: none;
+    }
+}
 
 .banner_part {
     position: relative;
@@ -120,10 +131,88 @@ hr {
     color: #5A47D1;
 }
 
+/*使い方*/
+#howto{
+    background-image: url(../img/about-howto-bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.ten_discover_area {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    position: relative;
+}
+
+.ten_d_text {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.ten_discover_inner {
+    margin-bottom: -50px;
+    overflow: hidden;
+}
+
+.ten_d_text h2 {
+    font-weight: 700;
+    color: #fff;
+    padding-bottom: 10px;
+}
+
+.ten_d_text p {
+    font-size: 20px;
+    color: #fff;
+    font-family: "Heebo", sans-serif;
+    font-weight: 500;
+}
+
+
+.ten_discover_inner .media {
+    margin-bottom: 50px;
+}
+
+.ten_discover_inner .media .media-left {
+    padding-right: 15px;
+}
+
+.ten_discover_inner .media .media-left .ten_d_icon {
+    height: 63px;
+    width: 63px;
+    border: 4px solid #fff;
+    border-radius: 50%;
+    background: #5A47D1;
+    text-align: center;
+    line-height: 65px;
+}
+
+.ten_discover_inner .media .media-body h4 {
+    font-size: 22px;
+    font-family: "Heebo", sans-serif;
+    font-weight: bold;
+    color: #fff;
+    padding-bottom: 22px;
+    padding-top: 15px;
+}
+
+.ten_discover_inner .media .media-body p {
+    font-size: 16px;
+    line-height: 28px;
+    color: #f5f5f5;
+    font-family: "Heebo", sans-serif;
+    font-weight: normal;
+}
+
+.ten_d_icon i{
+    color: #fff;
+    font-size: 30px;
+}
+
 /*news*/
 
 #news {
-    padding: 0 0 8rem 0;
+    padding: 6.5rem 0 6.5rem 0;
 }
 
 #news h2{
